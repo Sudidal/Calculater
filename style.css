@@ -40,3 +40,24 @@ body
     border: 1px solid black;
     font-size: 20px;
 }
+#footer
+{
+    position: absolute;
+    align-self: center;
+    margin-top: 90vh;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.697);
+}
+.op
+{
+    background-color: coral;
+    color: aqua;
+}
+.zero
+{
+    width: 150px;
+}
+.equals
+{
+    width: 150px;
+}

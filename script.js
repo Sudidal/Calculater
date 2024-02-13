@@ -27,6 +27,12 @@ function addEventListeners()
 function addDigit(Event)
 {
     let digit = Event.target.innerText;
+
+    if(input.innerText != "" && !hasNumber(input.innerText))
+    {
+        input.innerText = "";
+    }
+
     if(IsOperator(digit))
     {
         if(firstNumber == "")
@@ -86,8 +92,8 @@ function IsOperator(digit)
 
 function Evaluate(_firstNumber, _operator, _secondNumber)
 {
-    _firstNumber = parseInt(_firstNumber);
-    _secondNumber = parseInt(_secondNumber);
+    _firstNumber = parseFloat(_firstNumber);
+    _secondNumber = parseFloat(_secondNumber);
     let result;
 
     switch (_operator)
@@ -108,6 +114,11 @@ function Evaluate(_firstNumber, _operator, _secondNumber)
             console.log("Error Can't Specify Operator");
     }
     return result;
+}
+
+function hasNumber(_input) 
+{
+    return /\d/.test(_input);
 }
 
 function Add(fn, sn)
