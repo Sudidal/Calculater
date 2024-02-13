@@ -5,15 +5,38 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
+body
+{
+    display: flex;
+    justify-content: center;
+}
+#container
+{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
 #input
 {
-    width: 150px;
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border: 1px solid black;
 }
 #buttonsdiv
 {
+    width: 300px;
     display: flex;
+    flex-wrap: wrap;
 }
 .calcbtn
 {
-    width: 50px;
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    font-size: 20px;
 }

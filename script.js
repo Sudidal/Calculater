@@ -4,7 +4,7 @@ const dE = document.querySelector(".DE");
 const input = document.querySelector("#input")
 
 let buttonsArray;
-input.value = "";
+input.innerText = "";
 let firstNumber = "";
 let secondNumber = "";
 let operator = "";
@@ -31,20 +31,20 @@ function addDigit(Event)
     {
         if(firstNumber == "")
         {
-            firstNumber = input.value;
+            firstNumber = input.innerText;
             operator = digit;
-            input.value = "";
+            input.innerText = "";
         }
         else
         {
-            if(IsOperator(input.value))
+            if(IsOperator(input.innerText))
             {
                 operator = digit;
             }
             else
             {
-                secondNumber = input.value;
-                input.value = Evaluate(firstNumber, operator, secondNumber);
+                secondNumber = input.innerText;
+                input.innerText = Evaluate(firstNumber, operator, secondNumber);
                 firstNumber = "";
                 secondNumber = "";
                 operator = "";
@@ -52,21 +52,21 @@ function addDigit(Event)
             }
         }
     }
-    if(IsOperator(input.value))
+    if(IsOperator(input.innerText))
     {
-        input.value = "";
+        input.innerText = "";
     }
 
-    input.value += digit;
+    input.innerText += digit;
 }
 
 function DE()
 {
-    input.value = input.value.substring(0, input.value.length-1);
+    input.innerText = input.innerText.substring(0, input.innerText.length-1);
 }
 function AC()
 {
-    input.value = "";
+    input.innerText = "";
     firstNumber = "";
     secondNumber = "";
     operator = "";
